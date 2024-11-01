@@ -5,72 +5,72 @@ cmake_dependent_option(RL_BUILD_MDL_NLOPT "Build NLopt support" ON "RL_BUILD_MDL
 
 set(
         HDRS
-#        AnalyticalInverseKinematics.h
-#        Body.h
-#        Cylindrical.h
-#        Dynamic.h
-#        Element.h
-#        EulerCauchyIntegrator.h
-#        Exception.h
-#        Factory.h
-#        Fixed.h
-#        Frame.h
-#        Helical.h
-#        Integrator.h
-#        InverseKinematics.h
-#        IterativeInverseKinematics.h
-#        JacobianInverseKinematics.h
-#        Joint.h
-#        Kinematic.h
-#        Metric.h
-#        Model.h
-#        Prismatic.h
-#        Revolute.h
-#        RungeKuttaNystromIntegrator.h
-#        SixDof.h
-#        Spherical.h
-#        Transform.h
-#        UrdfFactory.h
-#        World.h
-#        XmlFactory.h
+        AnalyticalInverseKinematics.h
+        Body.h
+        Cylindrical.h
+        Dynamic.h
+        Element.h
+        EulerCauchyIntegrator.h
+        Exception.h
+        Factory.h
+        Fixed.h
+        Frame.h
+        Helical.h
+        Integrator.h
+        InverseKinematics.h
+        IterativeInverseKinematics.h
+        JacobianInverseKinematics.h
+        Joint.h
+        Kinematic.h
+        Metric.h
+        Model.h
+        Prismatic.h
+        Revolute.h
+        RungeKuttaNystromIntegrator.h
+        SixDof.h
+        Spherical.h
+        Transform.h
+        UrdfFactory.h
+        World.h
+        XmlFactory.h
 )
 
 set(
         SRCS
-#        AnalyticalInverseKinematics.cpp
-#        Body.cpp
-#        Cylindrical.cpp
-#        Dynamic.cpp
-#        Element.cpp
-#        EulerCauchyIntegrator.cpp
-#        Exception.cpp
-#        Fixed.cpp
-#        Factory.cpp
-#        Frame.cpp
-#        Helical.cpp
-#        Integrator.cpp
-#        InverseKinematics.cpp
-#        IterativeInverseKinematics.cpp
-#        JacobianInverseKinematics.cpp
-#        Joint.cpp
-#        Kinematic.cpp
-#        Metric.cpp
-#        Model.cpp
-#        Prismatic.cpp
-#        Revolute.cpp
-#        RungeKuttaNystromIntegrator.cpp
-#        SixDof.cpp
-#        Spherical.cpp
-#        Transform.cpp
-#        UrdfFactory.cpp
-#        World.cpp
-#        XmlFactory.cpp
+        AnalyticalInverseKinematics.cpp
+        Body.cpp
+        Cylindrical.cpp
+        Dynamic.cpp
+        Element.cpp
+        EulerCauchyIntegrator.cpp
+        Exception.cpp
+        Fixed.cpp
+        Factory.cpp
+        Frame.cpp
+        Helical.cpp
+        Integrator.cpp
+        InverseKinematics.cpp
+        IterativeInverseKinematics.cpp
+        JacobianInverseKinematics.cpp
+        Joint.cpp
+        Kinematic.cpp
+        Metric.cpp
+        Model.cpp
+        Prismatic.cpp
+        Revolute.cpp
+        RungeKuttaNystromIntegrator.cpp
+        SixDof.cpp
+        Spherical.cpp
+        Transform.cpp
+        UrdfFactory.cpp
+        World.cpp
+        XmlFactory.cpp
 )
 
-if(RL_BUILD_MDL_NLOPT)
-    list(APPEND HDRS NloptInverseKinematics.h)
-    list(APPEND SRCS NloptInverseKinematics.cpp)
-endif()
+#if(RL_BUILD_MDL_NLOPT)
+#    list(APPEND HDRS NloptInverseKinematics.h)
+#    list(APPEND SRCS NloptInverseKinematics.cpp)
+#endif()
 
 add_library(
         mdl

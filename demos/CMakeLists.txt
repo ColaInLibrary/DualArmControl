@@ -19,10 +19,10 @@ endif()
 #	add_subdirectory(rlLoadXmlDemo)
 #endif()
 #
-#if(RL_BUILD_KIN)
-#	add_subdirectory(rlJacobianDemo)
+if(RL_BUILD_KIN)
+	add_subdirectory(rlJacobianDemo)
 #	add_subdirectory(rlPumaDemo)
-#endif()
+endif()
 #
 #if(RL_BUILD_MDL)
 #	add_subdirectory(rlDynamics1Demo)

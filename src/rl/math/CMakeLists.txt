@@ -28,7 +28,7 @@ set(
 	QuaternionBaseAddons.h
 	Real.h
 	Rotation.h
-#	Spatial.h
+	Spatial.h
 #	Spline.h
 #	SplineQuaternion.h
 	Transform.h
@@ -36,7 +36,7 @@ set(
 #	TrapezoidalVelocity.h
 #	TypeTraits.h
 #	Unit.h
-#	Units.h
+	Units.h
 	Vector.h
 )
 list(APPEND HDRS ${BASE_HDRS})
@@ -50,16 +50,16 @@ list(APPEND HDRS ${METRICS_HDRS})
 
 set(
 	SPATIAL_HDRS
-#	spatial/ArticulatedBodyInertia.h
-#	spatial/ArticulatedBodyInertia.hxx
-#	spatial/ForceVector.h
-#	spatial/ForceVector.hxx
-#	spatial/MotionVector.h
-#	spatial/MotionVector.hxx
-#	spatial/PlueckerTransform.h
-#	spatial/PlueckerTransform.hxx
-#	spatial/RigidBodyInertia.h
-#	spatial/RigidBodyInertia.hxx
+	spatial/ArticulatedBodyInertia.h
+	spatial/ArticulatedBodyInertia.hxx
+	spatial/ForceVector.h
+	spatial/ForceVector.hxx
+	spatial/MotionVector.h
+	spatial/MotionVector.hxx
+	spatial/PlueckerTransform.h
+	spatial/PlueckerTransform.hxx
+	spatial/RigidBodyInertia.h
+	spatial/RigidBodyInertia.hxx
 )
 list(APPEND HDRS ${SPATIAL_HDRS})
 
