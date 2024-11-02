@@ -74,14 +74,18 @@ int main(int argc, char** argv) {
     for (std::ptrdiff_t i = 0; i < qdot.size(); ++i) {
       qdot(i) = boost::lexical_cast<rl::math::Real>(argv2[q.size() + i + 2]);
     }
-    auto now = std::chrono::high_resolution_clock::now(); // 获取当前时间点
-    auto now_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count(); // 转换为纳秒
-    kinematic->setPosition(q);
-    kinematic->forwardPosition();
-    kinematic->calculateJacobian();
-    now = std::chrono::high_resolution_clock::now(); // 获取当前时间点
-    auto now_ns2 = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count(); // 转换为纳秒
-    std::cout << "Jacobian time: " << (now_ns2 - now_ns) << " ns" << std::endl;
+    double time = 0;
+    for (int i = 0; i < 10000; ++i) {
+      auto now = std::chrono::high_resolution_clock::now(); // 获取当前时间点
+      auto now_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count(); // 转换为纳秒
+      kinematic->setPosition(q);
+      kinematic->forwardPosition();
+      kinematic->calculateJacobian();
+      now = std::chrono::high_resolution_clock::now(); // 获取当前时间点
+      auto now_ns2 = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count(); // 转换为纳秒
+      time += now_ns2 - now_ns;
+    }
+    std::cout << "Jacobian time: " << time/10000.0 << " ns" << std::endl;
 
     std::cout << "J=" << std::endl << kinematic->getJacobian() << std::endl;
 
