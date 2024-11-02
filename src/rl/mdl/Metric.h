@@ -24,30 +24,23 @@ class RL_MDL_EXPORT Metric : public Model {
 
   Model* clone() const;
 
-  ::rl::math::Real distance(const ::rl::math::Vector& q1,
-                            const ::rl::math::Vector& q2) const;
+  ::rl::math::Real distance(const ::rl::math::Vector& q1, const ::rl::math::Vector& q2) const;
 
-  void interpolate(const ::rl::math::Vector& q1, const ::rl::math::Vector& q2,
-                   const ::rl::math::Real& alpha, ::rl::math::Vector& q) const;
+  void interpolate(const ::rl::math::Vector& q1, const ::rl::math::Vector& q2, const ::rl::math::Real& alpha, ::rl::math::Vector& q) const;
 
-  ::rl::math::Real inverseOfTransformedDistance(
-      const ::rl::math::Real& d) const;
+  ::rl::math::Real inverseOfTransformedDistance(const ::rl::math::Real& d) const;
 
   bool isValid(const ::rl::math::Vector& q) const;
 
   void normalize(::rl::math::Vector& q) const;
 
-  void step(const ::rl::math::Vector& q1, const ::rl::math::Vector& dq,
-            ::rl::math::Vector& q2) const;
+  void step(const ::rl::math::Vector& q1, const ::rl::math::Vector& dq, ::rl::math::Vector& q2) const;
 
   ::rl::math::Real transformedDistance(const ::rl::math::Real& d) const;
 
-  ::rl::math::Real transformedDistance(const ::rl::math::Vector& q1,
-                                       const ::rl::math::Vector& q2) const;
+  ::rl::math::Real transformedDistance(const ::rl::math::Vector& q1, const ::rl::math::Vector& q2) const;
 
-  ::rl::math::Real transformedDistance(const ::rl::math::Real& q1,
-                                       const ::rl::math::Real& q2,
-                                       const ::std::size_t& i) const;
+  ::rl::math::Real transformedDistance(const ::rl::math::Real& q1, const ::rl::math::Real& q2, const ::std::size_t& i) const;
 
   virtual void update();
 
